@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubble</title>
+</head>
+<body>
+    <div id="contaner">
+        <h1 >Bubble Events</h1>
+        <ul id="first">
+        <li id="second" class="bubble">lorem6</li>
+        <li class="bubble">T-shirt</li>
+        <li class="bubble">Shirt</li>
+        <li class="bubble">pent</li>
+        <li class="bubble">shows</li>
+    </ul>
+    <button id="another">add another items</button>
+    </div>
+    <script>
+    //    var items= document.getElementsByClassName('bubble');
+    //     for(var i=0;i<items.length;i++){
+    //         var bubble=items[i];
+    //         bubble.addEventListener('click',function(event){
+    //             event.target.parentNode.removeChild(event.target);
+    //         })
+    //     }
+
+        document.getElementById('another').addEventListener('click',function(event){
+            var parentItem=document.getElementById('first');
+            var newItem=document.createElement('li');
+            newItem.innerText='Boxer';
+            parentItem.appendChild(newItem);
+        });
+
+        
+        document.getElementById('first').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+            
+        })
+    </script>
+</body>
+</html>

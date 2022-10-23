@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+</head>
+<body>
+    <div id="contaner">
+        <h1 >Bubble Events</h1>
+        <ul id="first">
+        <li id="second" class="bubble-1">lorem6</li>
+        <li class="bubble-2">T-shirt</li>
+        <li class="bubble-3">Shirt</li>
+        <li class="bubble-4">pent</li>
+        <li class="bubble-5">shows</li>
+    </ul>
+    </div>
+    
+    <script>
+        document.getElementById('contaner').addEventListener('click',function(event){
+            console.log('Hello Iam h1');
+           
+            
+        })
+
+        document.getElementById('first').addEventListener('click',function(event){
+            console.log('Hello Iam ul');
+            event.stopPropagation();
+        })
+        
+        document.getElementById('second').addEventListener('click',function(event){
+            console.log('Hello Iam list');
+            //event.stopPropagation();
+        })
+        
+    </script>
+</body>
+</html>

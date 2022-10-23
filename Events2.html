@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD EVENT LISTENENER </title>
+</head>
+<body>
+    <h1>Ad Events LISTENENER</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, dolores!</p>
+    <p>Maxime illo impedit reiciendis rem neque, sequi eius illum quos.</p>
+    <p>Molestiae, reprehenderit! Iusto corrupti, expedita itaque reprehenderit laudantium nam ad?</p>
+    <button id="first">Click me-1</button>
+    <button id="second">Click me-2</button>
+    <button id="thard">click me-3</button>
+    <script>
+        
+        //first sestaim
+
+        function handliClick(){
+            document.body.style.backgroundColor='cyan';
+        }
+        const ClickIt=document.getElementById('first');
+        ClickIt.onclick=handliClick;
+
+        //second
+
+        function secondIt(){
+            document.body.style.color='white';
+        }
+        const ClickIt2=document.getElementById('second');
+        ClickIt2.addEventListener('click',secondIt);
+
+        //thard
+        
+        document.getElementById('thard').addEventListener('click',function() {
+            document.body.style.backgroundColor='black';
+            document.body.style.color='white';
+        });
+
+
+
+    </script>
+</body>
+</html>
